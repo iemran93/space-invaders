@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="\static\css\style.css">
+    <link rel="icon" type="image/x-icon" href="\static\images\favicon.ico">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="game-area">
+            <div class="hidden" id="level-up-message"><p>dgda</p></div>
+            <div id="player"></div>
+            <div id="enemies"></div>
+            <div id="bullets"></div>
+            <!-- <div id="background">
+                <div class="bg-layer bg-layer-1"></div>
+                <div class="bg-layer bg-layer-2"></div>
+                <div class="bg-layer bg-layer-3"></div>
+            </div> -->
+            <div class="bg-layer" id="bg"></div>
+        </div>
+        <div id="score-board">
+            <span id="level">Level: 1</span>
+            <span id="timer">Time: 60</span>
+            <span id="score">Score: 0</span>
+            <span id="lives">Lives: 3</span>
+        </div>
+        <div id="pause-menu" class="hidden">
+            <h2>Paused</h2>
+            <button id="continue">Continue</button>
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+    <script src="\static\js\game.js" type="module"></script>
+</body>
+
+</html>
