@@ -61,6 +61,10 @@ class Game {
         document.getElementById('continue').addEventListener('click', () => this.togglePause());
         document.getElementById('restart').addEventListener('click', () => this.restartGame());
         window.addEventListener('resize', () => this.handleResize());
+        
+        // Add touch event listeners
+        this.gameArea.addEventListener('touchstart', (e) => this.handleTouchStart(e));
+        this.gameArea.addEventListener('touchend', (e) => this.handleTouchEnd(e));
         console.log('Event listeners set up');
     }
 
@@ -410,6 +414,27 @@ class Game {
         this.player.reset();
         console.log('Game restarted');
         this.startGame();
+    }
+
+    // New methods for handling touch input
+    handleTouchStart(e) {
+        const touch = e.touches[0];
+        const touchX = touch.clientX;
+        const touchY = touch.clientY;
+
+        // Example: Move left if touch is on the left half of the screen
+        if (touchX < this.gameArea.clientWidth / 2) {
+            this.keys.left = true;
+        } else {
+            this.keys.right = true;
+        }
+        this.keys.space = true; // Assume shooting on touch
+    }
+
+    handleTouchEnd(e) {
+        this.keys.left = false;
+        this.keys.right = false;
+        this.keys.space = false;
     }
 }
 
