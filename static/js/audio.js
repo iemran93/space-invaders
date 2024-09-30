@@ -5,13 +5,13 @@ maybe for the future
 export default class AudioManager {
     constructor() {
         this.sounds = {
-            backgroundMusic: new Audio('/static/audio/background-music.mp3'),
-            shoot: new Audio('/static/audio/shoot.mp3'),
-            explosion: new Audio('/static/audio/explosion.mp3'),
-            levelUp: new Audio('/static/audio/level-up.mp3'),
-            gameOver: new Audio('/static/audio/game-over.mp3'),
-            playerHit: new Audio('/static/audio/lives.mp3'),
-            pause: new Audio('/static/audio/pause.mp3'),
+            backgroundMusic: new Audio('/space-invaders/static/audio/background-music.mp3'),
+            shoot: new Audio('/space-invaders/static/audio/shoot.mp3'),
+            explosion: new Audio('/space-invaders/static/audio/explosion.mp3'),
+            levelUp: new Audio('/space-invaders/static/audio/level-up.mp3'),
+            gameOver: new Audio('/space-invaders/static/audio/game-over.mp3'),
+            playerHit: new Audio('/space-invaders/static/audio/lives.mp3'),
+            pause: new Audio('/space-invaders/static/audio/pause.mp3'),
         };
 
         // Set background music to loop
